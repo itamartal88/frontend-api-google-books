@@ -1,0 +1,49 @@
+
+
+<div id="main">
+  <h1 class="login-form">{{header}}</h1>
+  <form class="login-form">
+    <mat-form-field class="example-full-width">
+      <input (keyup)='checkValid()' [(ngModel)]="name" matInput placeholder="Full Name" [formControl]="nameFormControl"
+             [errorStateMatcher]="nameMatcher">
+      <mat-hint> enter your Name (least 2 chars)</mat-hint>
+      <mat-error *ngIf="nameFormControl.hasError('minLength') && !nameFormControl.hasError('required')">
+       At least 2 chars
+      </mat-error>
+      <mat-error *ngIf="nameFormControl.hasError('required')">
+        Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <br>
+  <form class="login-form">
+    <mat-form-field class="example-full-width">
+      <input  (keyup)='checkValid()' [(ngModel)]="email" matInput placeholder="Email" [formControl]="emailFormControl"
+             [errorStateMatcher]="emailMatcher">
+      <mat-hint>please type your email!</mat-hint>
+      <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+  <br>
+  <form class="login-form">
+    <mat-form-field class="example-full-width">
+      <input (keyup)='checkValid()' [(ngModel)]="password" type="password" matInput placeholder="password" [formControl]="passworFormdControl"
+             [errorStateMatcher]="passwordMatcher">
+      <mat-hint>Insert your password (least 6 chars)</mat-hint>
+      <mat-error *ngIf="passworFormdControl.hasError('pattern') && !passworFormdControl.hasError('required')">
+        Please enter at least 6 chars of letters & numbers only
+      </mat-error>
+      <mat-error *ngIf="passworFormdControl.hasError('required')">
+        Password is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form><br>
+  <button type="Button" (click)='goToSearchPage()' [disabled]="!validate" class="login-form btn btn-success">Login</button>
+</div>
+ 
+

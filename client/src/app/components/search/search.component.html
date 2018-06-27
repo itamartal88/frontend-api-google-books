@@ -1,0 +1,14 @@
+
+<app-top-bar></app-top-bar>
+<router-outlet></router-outlet>
+    <body class="body" [ngStyle]="{'background-color':'thistle'}">
+    <div id='search'>
+    <input id='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()' matInput placeholder="search book">
+    </div>
+
+    <div class='bookDiv' *ngFor='let book of booksBySearch'>
+    <p id='bookName' title="{{book.volumeInfo.title}}">{{book.volumeInfo.title}}</p>
+    <img title="{{book.volumeInfo.title}}" [src]="getSrc(book)" /><br><br>
+    <button type="Button" (click)='infoDialog(book)' class="btn btn-danger">More info</button>
+    </div>
+    </body>

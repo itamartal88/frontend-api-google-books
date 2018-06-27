@@ -1,0 +1,13 @@
+
+
+<app-top-bar></app-top-bar>
+<router-outlet></router-outlet>
+<body class="body" [ngStyle]="{'background-color':'thistle'}">
+<h1>{{header}}</h1>
+<div class="wishDiv" *ngFor='let book of wishListBooks'>
+<p id='bookName' title="{{book.name}}">{{book.name}}</p>
+<img title="{{book.name}}" src='{{book.img}}' /><br><br>
+<button class="Rectangle-6 btn btn-danger" (click)='deleteFromWishList(book)'><mat-icon>delete_forever</mat-icon>Delete</button><br><br>
+</div>
+<p *ngIf='wishListBooks.length == 0'>wish-list is empty</p>
+</body>

@@ -1,0 +1,17 @@
+
+
+#main{
+    width: 220vh;
+    position: absolute;
+    background-image: url('./../../../assets/images/backGroundImg.jpg');
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-form{
+    position: relative;
+    left: 30%;
+}
+
