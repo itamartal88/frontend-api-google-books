@@ -14,7 +14,7 @@ import { MyErrorStateMatcher } from './../../services/errorState/errorStateMatch
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponentnauaj implements OnInit {
 public validate:boolean;
 public email:string;
 public name:string;

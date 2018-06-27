@@ -1,17 +1,92 @@
 
 
 #main{
-    width: 220vh;
+  /*  width: 220vh;
     position: absolute;
     background-image: url('./../../../assets/images/backGroundImg.jpg');
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
+    width: 1024px;
+    height: 624px;
+    background-color: #ffffff;
+    margin-top: 20px;
 }
+
+form {
+    width: 388px;
+    height: 95px;
+  }
 
 .login-form{
     position: relative;
     left: 30%;
 }
 
+.Form-Title {
+    width: 73px;
+    height: 19px;
+    font-family: AvenirNextLTPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #383838;
+  }
+
+  .header {
+    width: 198px;
+    height: 44px;
+    font-family: AvenirNextLTPro;
+    font-size: 36px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2a2c2e;
+  }  
+
+  .Text {
+   /* width: 278px;*/
+    height: 28px;
+    position: relative;
+    top:5px;
+    font-family: AvenirNextLTPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #78909c;
+   /* border:1px solid red;*/
+    width: 388px;
+  }
+
+  .Error {
+    width: 388px;
+    height: 15px;
+    font-family: AvenirNextLTPro;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #f5363c;
+  }
+
+  .Bttn {
+    width: 388px;
+    height: 50px;
+    border-radius: 4px;
+    background-image: linear-gradient(97deg, #79beff, #448aff);
+  }

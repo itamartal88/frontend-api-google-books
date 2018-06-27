@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material';
 //components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
+//import { LoginComponent } from './components/login/login.component';
 import { SearchComponent } from './components/search/search.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
@@ -19,15 +19,17 @@ import { AppService } from './services/app/app.service';
 import { HttpService } from './services/http/http.service';
 import { ValidateService } from './services/validate/validate.service';
 import { LoginGuard } from './guards/login/login.guard';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
+  /*  LoginComponent,*/
     SearchComponent,
     TopBarComponent,
     WishListComponent,
-    SearchDialogComponent
+    SearchDialogComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { LoginGuard } from './guards/login/login.guard';
     MatInputModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path: 'login', component: LoginComponent },
+      /*{path: 'login', component: LoginComponent },*/
+      {path: 'loginpage', component: LoginPageComponent },
       {path: 'list', component: WishListComponent,canActivate:[LoginGuard] },
       {path: 'search', component: SearchComponent,canActivate:[LoginGuard] },
     ]),

@@ -2,12 +2,12 @@
 
 
 <div id='main'>
-
-<p id="bookName">{{data.name}}</p>
-<p id="bookPublish">Publish Date:{{data.publishDate}}</p>
-<img src='{{data.img}}' /><br><br>
-<p id="bookText" [innerHTML]='data.textSnippet'></p>
-<button class="Rectangle-6 btn btn-primary" [disabled]="!validate" (click)='addToWishList(data)'><mat-icon>favorite</mat-icon>Add to wish-list</button><br><br>
-<button class="Rectangle-6 btn btn-danger" (click)='close()'>close</button>
-
+<div>
+<p class="bookName">{{data.name}}</p>
+<p class="bookPublish">Publish Date:{{data.publishDate}}</p>
+<img class="book-closeup" src='{{data.img}}' />
+<p class="bookText" [innerHTML]='data.textSnippet'></p>
+</div><br>
+<button class="addToWishBtn" [disabled]="!validate" (click)='addToWishList(data)'><mat-icon>favorite</mat-icon>Add to wish-list</button><br><br>
+<button class="closeBtn" (click)='close()'>close</button>
 </div>

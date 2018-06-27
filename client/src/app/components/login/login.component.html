@@ -1,13 +1,14 @@
 
 
 <div id="main">
-  <h1 class="login-form">{{header}}</h1>
+  <h1 *ngIf="validate" class="login-form">hello,{{ name}}</h1>
   <form class="login-form">
+    <p class="Form-Title">Name</p>
     <mat-form-field class="example-full-width">
-      <input (keyup)='checkValid()' [(ngModel)]="name" matInput placeholder="Full Name" [formControl]="nameFormControl"
+      <input class="Text" (keyup)='checkValid()' (blur)="checkRequird()" [(ngModel)]="name" matInput placeholder="Full Name" [formControl]="nameFormControl"
              [errorStateMatcher]="nameMatcher">
       <mat-hint> enter your Name (least 2 chars)</mat-hint>
-      <mat-error *ngIf="nameFormControl.hasError('minLength') && !nameFormControl.hasError('required')">
+      <mat-error class="Error" *ngIf="nameFormControl.hasError('minLength') && !nameFormControl.hasError('required')">
        At least 2 chars
       </mat-error>
       <mat-error *ngIf="nameFormControl.hasError('required')">
@@ -17,6 +18,7 @@
   </form>
   <br>
   <form class="login-form">
+      <p class="Form-Title">Email</p>
     <mat-form-field class="example-full-width">
       <input  (keyup)='checkValid()' [(ngModel)]="email" matInput placeholder="Email" [formControl]="emailFormControl"
              [errorStateMatcher]="emailMatcher">
@@ -31,6 +33,7 @@
   </form>
   <br>
   <form class="login-form">
+      <p class="Form-Title">Password</p>
     <mat-form-field class="example-full-width">
       <input (keyup)='checkValid()' [(ngModel)]="password" type="password" matInput placeholder="password" [formControl]="passworFormdControl"
              [errorStateMatcher]="passwordMatcher">
@@ -43,7 +46,7 @@
       </mat-error>
     </mat-form-field>
   </form><br>
-  <button type="Button" (click)='goToSearchPage()' [disabled]="!validate" class="login-form btn btn-success">Login</button>
+  <button type="Button" (click)='goToSearchPage()' [disabled]="!validate" class="Bttn login-form btn btn-success">Login</button>
 </div>
  
 

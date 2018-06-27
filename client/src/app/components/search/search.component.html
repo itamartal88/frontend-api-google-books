@@ -1,14 +1,18 @@
 
 <app-top-bar></app-top-bar>
 <router-outlet></router-outlet>
-    <body class="body" [ngStyle]="{'background-color':'thistle'}">
-    <div id='search'>
-    <input id='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()' matInput placeholder="search book">
+    <body class="body">
+    <div class='search'>
+    <input class='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()' matInput placeholder="search book">
+    <mat-icon class='searchIcon'>search</mat-icon>
     </div>
 
     <div class='bookDiv' *ngFor='let book of booksBySearch'>
-    <p id='bookName' title="{{book.volumeInfo.title}}">{{book.volumeInfo.title}}</p>
-    <img title="{{book.volumeInfo.title}}" [src]="getSrc(book)" /><br><br>
-    <button type="Button" (click)='infoDialog(book)' class="btn btn-danger">More info</button>
+    <div class="mask">
+    <img class="bookImg" title="{{book.volumeInfo.title}}" [src]="getSrc(book)" />
+    </div>
+    <p class='bookName' title="{{book.volumeInfo.title}}">{{book.volumeInfo.title}}</p>
+    <a class='moreInfo' (click)='infoDialog(book)'>More info</a>
+    <mat-icon class='favIcon'>favorite</mat-icon>
     </div>
     </body>

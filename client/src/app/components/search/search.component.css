@@ -1,6 +1,6 @@
 
 
-#search{
+.search{
     position: relative;
     top: 10px;
     left: 10px;
@@ -11,33 +11,93 @@ img{
     height: 100px;
 }
 
-.bookDiv{
-    position: relative;
-    display: inline-block;
-    width:17%;
-    height:220px;
-    border:1px solid black;
-    text-align: center;
-    float: left;
-    left:60px;
-    margin-left: 5px;
-    margin-top: 20px;
-}
+.mask {
+    width: 231px;
+    height: 216px;
+    border-radius: 3px;
+    background-color: #f0f0f0;
+  }
 
-#bookName{
+.bookDiv {
+    position: relative;
+    width: 231px;
+    height: 342px;
+    border-radius: 4.3px;
+    box-shadow: 0 3px 7px 0 rgba(172, 181, 185, 0.4);
+    background-color: #ffffff;
+    border: solid 0.5px rgba(207, 216, 220, 0.2);
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .bookImg {
+    width: 119px;
+    height: 178px;
+    object-fit: contain;
+    display: block;
+    height: 100%;
+    margin:auto;
+    vertical-align: middle;
+    position: relative;
+    top:10px;
+  }
+
+
+.bookName {
     white-space: nowrap; 
     width: 150px; 
     overflow: hidden;
     text-overflow: ellipsis; 
-}
+    width: 211px;
+    height: 40px;
+    font-family: AvenirNextLTPro;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2a2c2e;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .moreInfo{
+      position: absolute;
+      bottom: 0;
+      margin:5px;
+  }
+
+  .favIcon{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin:5px; 
+  }
+
+  .moreInfo:hover{
+      cursor: pointer;
+  }
 
 .body{
-    position: absolute;
-    width: 100%;
-    height: 100%
+    width: 1024px;
+    height: 624px;
+    background-color: #ffffff;
 }
 
-#searchInput{
-    background-color: white;
-    width: 120px;
+.searchIcon{
+    position: relative;
+    left: -25px;
+    top:5px;
 }
+
+
+.searchInput {
+    width: 482px;
+    height: 35px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #f8f8f8;
+  }

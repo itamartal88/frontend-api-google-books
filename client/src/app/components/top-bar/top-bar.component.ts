@@ -28,6 +28,6 @@ export class TopBarComponent implements OnInit {
     this.loginGuard.login = false;
     this.appService.changeValidition(false);
     this.appService.changeSearchText('');
-    this.router.navigate(['login'])
+    this.router.navigate(['loginpage'])
   }
 }

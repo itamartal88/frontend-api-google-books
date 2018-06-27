@@ -1,31 +1,85 @@
 
-.wishDiv{
+
+.book{
+    width: 112px;
+    height: 160px;
+    object-fit: contain;
     position: relative;
-    display: inline-block;
-    width:17%;
-    height:220px;
-    border:1px solid black;
-    text-align: center;
     float: left;
-    left:60px;
-    margin-left: 5px;
-    margin-top: 20px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
+
+.btnn{
+    position: absolute;
+    left: 40%;
+    top:70%  
 }
 
-img{
-    width: 100px;
-    height: 100px;
+.btnn:hover{
+    cursor: pointer;
 }
 
-#bookName{
-    white-space: nowrap; 
-    width: 150px; 
-    overflow: hidden;
-    text-overflow: ellipsis; 
+.bookName{
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2a2c2e;
+    position: absolute;
+    left: 40%;
+    top:20%
 }
 
 .body{
-    position: absolute;
-    width: 100%;
-    height: 300%
+    width: 1024px;
+    height: 624px;
+    background-color: #ffffff;
+    text-align: center;
 }
+
+.wishDiv {
+    position: relative;
+    text-align: center;
+    width: 485px;
+    height: 224px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 4.4px;
+    box-shadow: 0 3px 8px 0 rgba(172, 181, 185, 0.4);
+    background-color: #ffffff;
+    border: solid 0.8px rgba(207, 216, 220, 0.2);
+  }
+
+  .block-with-text {
+    overflow: hidden;
+    line-height: 1.2em;
+    max-height: 3.6em; 
+    text-align: justify;  
+    padding-right: 1em;
+  }
+  
+  
+  .block-with-text:before {
+    content: '...';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  
+  
+  .block-with-text:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: white;
+  }
