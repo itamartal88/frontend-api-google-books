@@ -21,6 +21,7 @@ export class WishListComponent implements OnInit {
       var numInArray = this.wishListBooks.map(function(e) { return e.id; }).indexOf(book.id);
       this.wishListBooks.splice(numInArray,1);
       this.appService.changeWishList(this.wishListBooks);
+      this.appService.changeListNumber(this.wishListBooks.length);
     }
   }
 }

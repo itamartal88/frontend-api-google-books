@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material';
 //components
 import { AppComponent } from './app.component';
-//import { LoginComponent } from './components/login/login.component';
 import { SearchComponent } from './components/search/search.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { WishListComponent } from './components/wish-list/wish-list.component';
@@ -24,7 +23,6 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 @NgModule({
   declarations: [
     AppComponent,
-  /*  LoginComponent,*/
     SearchComponent,
     TopBarComponent,
     WishListComponent,
@@ -40,7 +38,6 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     MatInputModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      /*{path: 'login', component: LoginComponent },*/
       {path: 'loginpage', component: LoginPageComponent },
       {path: 'list', component: WishListComponent,canActivate:[LoginGuard] },
       {path: 'search', component: SearchComponent,canActivate:[LoginGuard] },

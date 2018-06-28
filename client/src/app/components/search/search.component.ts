@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { defualtImageSrc } from './../../services/consts/allConsts';
 import { AppService } from './../../services/app/app.service';
 import { SearchDialogComponent } from './../search-dialog/search-dialog.component';
@@ -12,12 +13,17 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 })
 export class SearchComponent implements OnInit {
   public searchText:string;
-  public booksBySearch = []
+  public booksBySearch = [];
+  public name:string;
+  public wishListNumber:number;
   constructor(public httpService:HttpService,public dialog:MatDialog,
-  public appService:AppService) { }
+  public appService:AppService,public router:Router) { }
 
   ngOnInit() {
+    this.appService.name.subscribe(val => this.name = val);
+    this.appService.wishListNum.subscribe(val => this.wishListNumber = val);
     this.appService.searchText.subscribe(val => this.searchText = val);
+    
     if(this.searchText.length > 1){
       this.httpService.serachBooks(this.searchText).subscribe((res) => {
         this.booksBySearch = res.items;
@@ -39,6 +45,10 @@ getSrc(book){
     return book.volumeInfo.imageLinks.smallThumbnail
   }
     return defualtImageSrc;
+}
+
+goToWishlist(){
+  this.router.navigate(['list']);
 }
 
 infoDialog(book){

@@ -28,6 +28,7 @@ export class SearchDialogComponent implements OnInit {
   addToWishList(book){
   this.wishArray._value.push(this.data);
   this.appService.changeWishList(this.wishArray._value);
+  this.appService.changeListNumber(this.wishArray._value.length);
   this.dialogRef.close();
   }
 

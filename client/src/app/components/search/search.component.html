@@ -1,10 +1,17 @@
 
 <app-top-bar></app-top-bar>
 <router-outlet></router-outlet>
-    <body class="body">
+    <body class="body">   
     <div class='search'>
-    <input class='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()' matInput placeholder="search book">
+        <div>
+        <h1 align="center">Hello,{{name}}!</h1>
+        <h6 align="center">You have {{wishListNumber}} items in your <a (click)='goToWishlist()'><u>wishlist</u></a></h6>
+        </div>
+    <input class='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()'  placeholder="search book">
     <mat-icon class='searchIcon'>search</mat-icon>
+    <input class='filterInput'  placeholder="filter..">
+    <mat-icon class='filterIcon'>arrow-drop-down</mat-icon>
+    <span class="filterIcon glyphicon glyphicon-collapse-down"></span>
     </div>
 
     <div class='bookDiv' *ngFor='let book of booksBySearch'>

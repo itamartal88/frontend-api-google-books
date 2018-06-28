@@ -59,6 +59,7 @@ export class LoginPageComponent implements OnInit {
    }
 
    goToSearchPage(){
+     this.appService.cahngeVisitorName(this.name);
     this.router.navigate(['search']);
    }
 
