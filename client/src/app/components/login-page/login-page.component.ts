@@ -24,6 +24,11 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit() {
     this.appService.validate.subscribe(val => this.loginValid = val);
+    this.appService.changeWishList([]);
+    this.LoginGuard.login = false;
+    this.appService.changeValidition(false);
+    this.appService.changeSearchText('');
+    this.appService.changeListNumber(0);
   }
 
   checkValid(event){
