@@ -15,7 +15,7 @@ export class TopBarComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToSearchPage(){
+ /* goToSearchPage(){
     this.router.navigate(['search'])
   }
 
@@ -28,6 +28,7 @@ export class TopBarComponent implements OnInit {
     this.loginGuard.login = false;
     this.appService.changeValidition(false);
     this.appService.changeSearchText('');
+    this.appService.changeListNumber(0);
     this.router.navigate(['loginpage'])
-  }
+  }*/
 }

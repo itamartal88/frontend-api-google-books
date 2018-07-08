@@ -1,25 +1,29 @@
-
+<div class="Desktop-Search">
 <app-top-bar></app-top-bar>
 <router-outlet></router-outlet>
-    <body class="body">   
-    <div class='search'>
-        <div>
-        <h1 align="center">Hello,{{name}}!</h1>
-        <h6 align="center">You have {{wishListNumber}} items in your <a (click)='goToWishlist()'><u>wishlist</u></a></h6>
-        </div>
+    
+    <h1 class="header">Hello,{{name}}!</h1>
+    <h6 class="numOfItems" align="center">You have {{wishListNumber}} items in your <a (click)='goToWishlist()'><u>wishlist</u></a></h6>
+     
+    <div class="inputsFiltering">
     <input class='searchInput' [(ngModel)]="searchText" (keyup)='searchBooks()'  placeholder="search book">
     <mat-icon class='searchIcon'>search</mat-icon>
     <input class='filterInput'  placeholder="filter..">
-    <mat-icon class='filterIcon'>arrow-drop-down</mat-icon>
     <span class="filterIcon glyphicon glyphicon-collapse-down"></span>
     </div>
 
+    <div class="bookContainer">
     <div class='bookDiv' *ngFor='let book of booksBySearch'>
     <div class="mask">
     <img class="bookImg" title="{{book.volumeInfo.title}}" [src]="getSrc(book)" />
     </div>
+    <div class="authotrsAndName">
     <p class='bookName' title="{{book.volumeInfo.title}}">{{book.volumeInfo.title}}</p>
+    <p class="bookAuthors">{{book.volumeInfo.authors}}</p>
+    <div>
     <a class='moreInfo' (click)='infoDialog(book)'>More info</a>
     <mat-icon class='favIcon'>favorite</mat-icon>
     </div>
-    </body>
+    </div>
+    
+</div>

@@ -1,29 +1,38 @@
-<div class="header align">
-    <h1 *ngIf="loginValid">Hello,{{name}}</h1>
-</div>
+<div class="Desktop-Login">
+  
+  <div class="headerPlaceHolder">
+    <app-top-bar *ngIf="loginValid"></app-top-bar>
+    <router-outlet></router-outlet>
+    <div *ngIf="loginValid" class="header align">
+    <h1>Hello,{{name}}</h1>
+    </div>
+  </div>
+
 <div id='main' class="align">
+
 <div class="form">
   <span>Name</span>
-  <input id='name' [(ngModel)]="name" [ngClass]="{'error':nameValid}" (keyup)='checkValid($event)' (blur)="checkRequird($event)" type="text" placeholder="insert name"/>
+  <input id='name' [(ngModel)]="name" [ngClass]="{'error':nameValid}" (keyup)='checkValid($event)' (blur)="checkRequird($event)" type="text" placeholder="Full Name"/>
   <span *ngIf="nameValid">{{nameError}}</span>
 </div>
 
-<div  class="form">
+<div class="form">
     <span>Email</span>
-    <input id='mail' [(ngModel)]="Email" [ngClass]="{'error':mailValid}" (blur)="checkRequird($event)" (keyup)='checkValid($event)' type="text" placeholder="insert Email"/>
+    <input id='mail' [(ngModel)]="Email" [ngClass]="{'error':mailValid}" (blur)="checkRequird($event)" (keyup)='checkValid($event)' type="text" placeholder="Email"/>
     <span *ngIf="mailValid">{{mailError}}</span>
   </div>
 
-    <div  class="form">
+    <div class="form">
       <span>Password</span>
-      <input id='password' [(ngModel)]="password" (blur)="checkRequird($event)" [ngClass]="{'error':passwordValid}" (keyup)='checkValid($event)' type="password" placeholder="insert password"/>
+      <input id='password' [(ngModel)]="password" (blur)="checkRequird($event)" [ngClass]="{'error':passwordValid}" (keyup)='checkValid($event)' type="password" placeholder="Password"/>
       <span *ngIf="passwordValid">{{passwordError}}</span>
     </div>
 
-    <div class='forgotPassword'>forgot password</div>
+    <div class='forgotPassword'>Forgot Password</div>
 
     <div>
       <button type="Button" (click)='goToSearchPage()' [disabled]="!loginValid" class="loginBtn">Login</button>
     </div>
 
+</div>
 </div>

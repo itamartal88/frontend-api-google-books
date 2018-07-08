@@ -1,48 +1,39 @@
 
 
-.book{
+.bookImg{
     width: 112px;
     height: 160px;
     object-fit: contain;
     position: relative;
     float: left;
-    display: inline-block;
-    height: 100%;
     vertical-align: middle;
-    margin-left: 10px;
+    margin-left: 24px;
+    margin-top: 32px;
   }
 
+  .bookDetails{
+    height: 181px;
+    margin-left: 176px;
+    margin-top: 43px;
+    position: relative;
+  }
 
-.btnn{
+.removeBtn{
     position: absolute;
-    left: 40%;
-    top:70%  
+    bottom: 40px;
+    left: 0;
 }
 
-.btnn:hover{
+.removeBtn:hover{
     cursor: pointer;
 }
 
 .bookName{
     font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: left;
     color: #2a2c2e;
-    position: absolute;
-    left: 40%;
-    top:20%
 }
 
-.body{
-    width: 1024px;
-    height: 624px;
-    background-color: #ffffff;
-    text-align: center;
-}
 
 .wishDiv {
     position: relative;
@@ -50,7 +41,7 @@
     width: 485px;
     height: 224px;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 30px;
     border-radius: 4.4px;
     box-shadow: 0 3px 8px 0 rgba(172, 181, 185, 0.4);
     background-color: #ffffff;
@@ -60,26 +51,29 @@
   .block-with-text {
     overflow: hidden;
     line-height: 1.2em;
-    max-height: 3.6em; 
+    max-height: 2.4em; 
     text-align: justify;  
     padding-right: 1em;
+    width: 280px;
   }
   
   
-  .block-with-text:before {
-    content: '...';
+  .bookAuthor{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    color: #78909c;
+    font-size: 16px;
   }
-  
-  
-  .block-with-text:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 1em;
-    height: 1em;
-    margin-top: 0.2em;
-    background: white;
-  }
+
+  .Desktop-wishList{
+    width: 1024px;
+    height: 624px;
+    background-color: #ffffff;
+    border:1px solid gray;
+    margin: auto;
+    text-align: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}  
+.Desktop-wishList::-webkit-scrollbar { 
+    display: none; 
+}

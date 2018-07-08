@@ -1,14 +1,16 @@
 
-
+<div class="Desktop-wishList">
 <app-top-bar></app-top-bar>
 <router-outlet></router-outlet>
-<body class="body">
 <h1>{{header}}</h1>
 <div class="wishDiv" *ngFor='let book of wishListBooks'>
-<img class="book" title="{{book.name}}" src='{{book.img}}' />   
+<img class="bookImg" title="{{book.name}}" src='{{book.img}}' /> 
+<div class="bookDetails">  
 <p class='block-with-text bookName' title="{{book.name}}">{{book.name}}</p>
-<a class="btnn" (click)='deleteFromWishList(book)'><u>Remove</u></a>
-<!--<button class="btnn btn btn-danger" (click)='deleteFromWishList(book)'><mat-icon>delete_forever</mat-icon>Remove</button><br><br>-->
+<p class="block-with-text bookAuthor">{{book.authors}}</p>
+<a class="removeBtn" (click)='deleteFromWishList(book)'><u>Remove</u></a>
+</div>
 </div>
 <p *ngIf='wishListBooks.length == 0'>wish-list is empty</p>
-</body>
+</div>
+

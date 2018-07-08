@@ -62,7 +62,7 @@ infoDialog(book){
     width: '300px',
     data: { name: book.volumeInfo.title,img:this.getSrc(book),
     id:book.id,publishDate:book.volumeInfo.publishedDate,
-    textSnippet:textSnippet }
+    textSnippet:textSnippet,authors:book.volumeInfo.authors }
   });
 }
 }
